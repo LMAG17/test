@@ -35,7 +35,7 @@ $ cd ios/ && pod install
 $ yarn ios
 ```
 
-# Zemoga React Native test
+# React Native test
 
 Esta prueba esta realizada con react native, puedes ver las capturas en la carpeta __screenshots__.
 

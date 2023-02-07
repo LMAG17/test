@@ -1,4 +1,4 @@
-# Zemoga React Native test
+# React Native test
 
 This Project is developed with react native, you can see the screenshots inside __screenshots__ folder
 

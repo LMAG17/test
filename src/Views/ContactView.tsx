@@ -1,7 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { useFocusEffect } from '@react-navigation/native';
+import React, { useContext } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { Context, ContextContent } from '../Context';
 
 export default function ContactView() {
+
+    const { setTitle }: ContextContent = useContext(Context);
+
+    useFocusEffect(() => { if (setTitle) setTitle("Contact") })
+    
     return (
         <View style={styles.container}>
             <Text style={styles.title}>ContactView</Text>

@@ -1,10 +1,15 @@
-import { Button, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { useNavigation } from '@react-navigation/native'
+import { useFocusEffect, useNavigation } from '@react-navigation/native'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
+import React, { useContext } from 'react'
+import { Button, StyleSheet, Text, View } from 'react-native'
+import { Context, ContextContent } from '../Context'
 import { RootStackParamList } from '../Models/RootStackParamList'
 
 export default function Screen1View() {
+    
+    const { setTitle }: ContextContent = useContext(Context);
+
+    useFocusEffect(() => { if (setTitle) setTitle("Screen1View") })
 
     const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>()
 

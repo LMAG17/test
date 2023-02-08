@@ -1,6 +1,5 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import React from 'react'
 import Screen1View from './Screen1View'
 import Screen2View from './Screen2View'
 
@@ -15,17 +14,3 @@ export default function HomeView() {
         </Stack.Navigator>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'cyan'
-    },
-    title: {
-        fontSize: 24,
-        color: 'black',
-        fontWeight: 'bold'
-    }
-})

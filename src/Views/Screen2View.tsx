@@ -1,8 +1,13 @@
-import { Button, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { useNavigation } from '@react-navigation/native'
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
+import React, { useContext } from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
+import { Context, ContextContent } from '../Context';
 
 export default function Screen2View() {
+
+    const { setTitle }: ContextContent = useContext(Context);
+
+    useFocusEffect(() => { if (setTitle) setTitle("Screen2View") })
 
     const navigation = useNavigation()
 
